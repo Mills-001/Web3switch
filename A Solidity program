@@ -1,0 +1,35 @@
+// SPDX-License-Identifier: MIT
+pragma solidity  0.8.4;
+
+contract Petrol {
+    string public name = "Booster";
+    uint256 private totalsupply = 10000000;
+    string internal owner = "THE EMPIRE";
+    mapping (address => uint256) petrolbalance;
+    address internal _owner = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+    //read function
+    function getpetrol() public view returns (string memory) {  
+        return name;
+    }
+
+    function getbalance() public view returns(uint256){  
+        return petrolbalance[msg.sender];
+    }
+
+    //examples of functions
+    function addpetrol(string memory) public payable returns (uint256) {  
+        uint a = 25;
+        uint b = 25;
+        uint c = b;
+        return petrolbalance[msg.sender];
+    }
+
+    function addpetrol (uint _x, uint256 _y ) internal pure returns (uint256) {  
+        return (_x + _y);
+    }
+
+    function getOwner () internal view returns (address) {  
+        return msg.sender;
+    }
+}

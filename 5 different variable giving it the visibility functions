@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: MIT
+pragma solidity  0.8.4;
+
+contract Petrol {
+    string public name = "Booster";
+    uint private totalsupply = 10000000;
+    string internal owner = "THE EMPIRE";
+    mapping (address => uint256) petrolbalance;
+    address public ownerAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+}

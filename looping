@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.5;
+
+contract CrudeOil {
+    function processOilBarrels(uint _num) public pure returns (uint) {
+        uint sum = 0;
+        for (uint x = 0; x< _num; x++) {
+            if (x %2 == 0){
+                continue;
+            }
+            if ( x > 12) {
+                break;
+            }
+            sum += x;
+        }
+        return sum;
+
+    }  
+} 

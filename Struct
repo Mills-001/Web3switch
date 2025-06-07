@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.5;
+
+contract Practice5 {
+    struct Person{
+        string name;
+        uint age;
+        address wallet;
+    }
+
+
+    Person[] public p1;
+    function setPerson(string memory _name,uint _age, address _wallet) public{
+        p1.push(Person(_name,_age,_wallet));
+    }
+    uint[] public age;
+    function addNumber(uint _n)public {
+        age.push(_n);
+    }
+    function addPerson(string memory _name, uint _age, address _wallet)public{
+        p1.push(Person(_name,_age,_wallet));
+    }
+}
